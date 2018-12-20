@@ -1,15 +1,17 @@
+Assumption: there are no duplicates in the array.
+Idea: we can select the minimum number each time when we loop through the entire array and swap the minimum number 
+to the left most position, then the final array after the swap process is the result.
+
 import java.util.Arrays;
 
 public class SelectionSort {
 	public int[] selectionSort(int[] array) {
-		// check null before any other things.
-		// check other conditions - empty array ... etc.
+		// corner case check
 		if (array == null || array.length <= 1) {
 			return array;
 		}
 		for (int i = 0; i < array.length - 1; i++) {
 			int min = i;
-			// find the min element in the subarray of (i, array.length - 1)
 			for (int j = i + 1; j < array.length; j++) {
 				if (array[j] < array[min]) {
 					min = j;
@@ -28,7 +30,7 @@ public class SelectionSort {
 	public static void main(String[] args) {
 		SelectionSort solution = new SelectionSort();
 
-		// test cases to cover all the possible situations.
+		// test all possible cases
 		int[] array = null;
 		array = solution.selectionSort(array);
 

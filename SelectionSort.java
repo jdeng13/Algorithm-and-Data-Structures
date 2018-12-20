@@ -1,6 +1,6 @@
-Assumption: there are no duplicates in the array.
-Idea: we can select the minimum number each time when we loop through the entire array and swap the minimum number 
-to the left most position, then the final array after the swap process is the result.
+// Assumption: there are no duplicates in the array.
+// Idea: we can select the minimum number each time when we loop through the entire array and swap the minimum number 
+// to the left most position, then the final array after the swap process is the result.
 
 import java.util.Arrays;
 
@@ -48,13 +48,13 @@ public class SelectionSort {
 	}
 }
 
-Time Complexity Analysis:
-for (int i = 0; i < n - 1; i++) {		
-	for (int j = i + 1; j < n; j++)
+// Time Complexity Analysis:
+// for (int i = 0; i < n - 1; i++) {		
+// 	for (int j = i + 1; j < n; j++)
 	
-iteration i = 0: inner      (0...n-1) = 4 (assume the length of the array is 5)
-iteration i = 1: inner n-1  (1...n-1) = 3
-iteration i = 2: inner n-2  (2...n-1) = 2
-iteration i = 3: inner n-3  (3...n-1) = 1
-1+2+3+....+n = n(n+1)/2 --> n^2 --> O(n^2)
-Space: O(1)
+// iteration i = 0: inner      (0...n-1) = 4 (assume the length of the array is 5)
+// iteration i = 1: inner n-1  (1...n-1) = 3
+// iteration i = 2: inner n-2  (2...n-1) = 2
+// iteration i = 3: inner n-3  (3...n-1) = 1
+// 1+2+3+....+n = n(n+1)/2 --> n^2 --> O(n^2)
+// Space: O(1)

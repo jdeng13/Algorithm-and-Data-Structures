@@ -47,9 +47,10 @@ public class SelectionSort {
 }
 
 Time Complexity Analysis:
-for (int i = 0; i < n - 1; i++) {		// outer loop: how many iterations
-for (int j = i + 1; j < n; j++)
-iteration i = 0: inner        (0...n-1) = 4 (assume the length of the array is 5)
+for (int i = 0; i < n - 1; i++) {		
+	for (int j = i + 1; j < n; j++)
+	
+iteration i = 0: inner      (0...n-1) = 4 (assume the length of the array is 5)
 iteration i = 1: inner n-1  (1...n-1) = 3
 iteration i = 2: inner n-2  (2...n-1) = 2
 iteration i = 3: inner n-3  (3...n-1) = 1

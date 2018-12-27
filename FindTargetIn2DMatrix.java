@@ -21,10 +21,12 @@ public class FindTargetIn2DMatrix {
 		result[1] = columnIndex;
 		return result;
 	}
-	private int targetRowIndex(int[][] matrix, int up, int down, int target) {		// O(logn)
+	private int targetRowIndex(int[][] matrix, int up, int down, int target) {		// O(logn)		
 		while (up <= down) {
 			int mid = up + (down - up) / 2;
-			if (matrix[mid][0] < target) {
+			if (matrix[mid][0] == target) {
+				return mid;
+			} else if (matrix[mid][0] < target) {
 				up = mid + 1;
 			} else {
 				down = mid - 1;

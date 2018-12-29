@@ -26,4 +26,4 @@ public class FindTargetIn1DArray {
 	}
 }
 // Time: O(log(n*m)). O(logn) to locate the row number, O(logm) to locate the column number.
-// Space: O(1) for result array, O(n*m) for N * M matrix, so totally O(nm)
+// Space: O(nm). O(1) for result array, O(n*m) for N * M matrix

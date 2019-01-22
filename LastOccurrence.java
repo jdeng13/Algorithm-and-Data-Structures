@@ -1,5 +1,6 @@
 // Assumption: there can be duplicates in the array.
-// Idea: we can apply the binary search to this problem since the binary search can narrow down the searching range quickly. Since we need to find the last occurence, we need to return the right index first when we find the target, if not, return left index.
+// Idea: we can apply the binary search to this problem since the binary search can narrow down the searching range quickly. 
+// Since we need to find the last occurence, we need to return the right index first when we find the target, if not, return left index.
 public class LastOccurence {
 	public int lastOccurence(int[] array, int target) {
 		// corner case check

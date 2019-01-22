@@ -1,3 +1,8 @@
+// Assumption: there can be duplicates in the array.
+// Idea: there are 2 ways to solve this problem, first, the naive solution is iterate through the entire array and see if we 
+// can find the first occurrence, second, we can apply the binary search to this problem since the array has sorted in ascending order. 
+// Obviously, the second method is faster than the first one.
+
 public class FirstOccurrence {
 	public int firstOccurrence(int[] array, int target) {
 		// corner case
@@ -22,5 +27,6 @@ public class FirstOccurrence {
 		return -1;
 	}
 }
+
 // Time: O(logn) since the while loop has logn levels.
 // Space: O(1)

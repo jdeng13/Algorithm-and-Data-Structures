@@ -2,7 +2,6 @@ package algorithm;
 
 //Assumptions: the array can contain duplicate numbers, K > 0, and K < array.length
 //Idea: first, we locate the left pointer to the position where it’s the largest smaller or equal number to the target, then we set up the right pointer that is 1 more index than left pointer. Now, there are 2 possible situations here: first, the right pointer can be out of bound, in this situation, the K closest numbers are K numbers to the left of the left pointer; second, the left and right pointers are not out of bound, we compare which pointer is closer to the target each time (use for loop to achieve this), then we can finally get all the numbers that are closest to the target.
-
 public class KClosest {
 	public int[] kClosest(int[] array, int target, int k) {
 		// corner case check
@@ -27,10 +26,6 @@ public class KClosest {
 		return result;
 	}
 	private int LargestSmallerOrEqual(int[] array, int target) {
-		// corner case check
-		if (array == null || array.length == 0) {
-			return -1;
-		}
 		// initial 2 pointers to locate the target
 		int left = 0;
 		int right = array.length - 1;
@@ -50,11 +45,6 @@ public class KClosest {
 		}
 		if (array[left] <= target) {
 			return left;
-		}
-		if (array[left] == target) {
-			return left;
-		} else if (array[right] == target) {
-			return right;
 		}
 		// if there is no such number
 		return -1;
